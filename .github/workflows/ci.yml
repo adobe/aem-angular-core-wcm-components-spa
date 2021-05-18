@@ -1,0 +1,20 @@
+name: Continuous Integration
+on: [pull_request]
+
+jobs:
+  test-react-base-components:
+    name: test react-base-components
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests and do code coverage check
+        run: npm run test
+      - name: Build the project
+        run: npm run build-prod
