@@ -2,8 +2,8 @@ name: Continuous Integration
 on: [pull_request,workflow_dispatch]
 
 jobs:
-  test-react-base-components:
-    name: test react-base-components
+  test-angular-base-components:
+    name: test angular-base-components
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
