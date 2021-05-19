@@ -21,7 +21,8 @@
     "postcover": "istanbul report json && node combine-coverage.js",
     "ngcc": "ngcc",
     "semantic-release": "semantic-release",
-    "postversion": "cp -r package.json"
+    "postversion": "cp -r package.json",
+
   },
   "repository": {
     "type": "git",
