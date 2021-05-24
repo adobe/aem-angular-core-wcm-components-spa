@@ -43,38 +43,38 @@
         }
       }
     },
-    "aem-angular-emptyfunctions-spa-wcm-components-emptyfunctions": {
+    "aem-angular-core-spa-wcm-components-core-emptyfunctions": {
       "projectType": "library",
-      "root": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions",
-      "sourceRoot": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/src",
+      "root": "projects/aem-angular-core-spa-wcm-components/emptyfunctions",
+      "sourceRoot": "projects/aem-angular-core-spa-wcm-components/emptyfunctions/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/tsconfig.lib.json",
-            "project": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/ng-package.json"
+            "tsConfig": "projects/aem-angular-core-spa-wcm-components/emptyfunctions/tsconfig.lib.json",
+            "project": "projects/aem-angular-core-spa-wcm-components/emptyfunctions/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/tsconfig.lib.prod.json"
+              "tsConfig": "projects/aem-angular-core-spa-wcm-components/emptyfunctions/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/src/test.ts",
-            "tsConfig": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/tsconfig.spec.json",
-            "karmaConfig": "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/karma.conf.js"
+            "main": "projects/aem-angular-core-spa-wcm-components/emptyfunctions/src/test.ts",
+            "tsConfig": "projects/aem-angular-core-spa-wcm-components/emptyfunctions/tsconfig.spec.json",
+            "karmaConfig": "projects/aem-angular-core-spa-wcm-components/emptyfunctions/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/tsconfig.lib.json",
-              "projects/aem-angular-emptyfunctions-spa-wcm-components/emptyfunctions/tsconfig.spec.json"
+              "projects/aem-angular-core-spa-wcm-components/emptyfunctions/tsconfig.lib.json",
+              "projects/aem-angular-core-spa-wcm-components/emptyfunctions/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
