@@ -15,8 +15,8 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 import {Component, HostBinding, Input} from "@angular/core";
-import {ContainerProperties,AbstractContainerComponent} from "@adobe/aem-core-components-angular-spa/core";
-
+import {AbstractContainerComponent} from "@adobe/aem-core-components-angular-spa/core";
+import {ContainerProperties} from "@adobe/aem-core-components-angular-spa/emptyfunctions";
 export interface AccordionV1Properties extends ContainerProperties{
     expandedItems: string[]
     singleExpansion: boolean

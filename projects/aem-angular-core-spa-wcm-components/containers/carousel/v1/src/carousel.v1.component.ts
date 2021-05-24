@@ -16,7 +16,8 @@
 
 
 import {ChangeDetectorRef, Component, HostBinding, Inject, Input, OnInit, PLATFORM_ID} from "@angular/core";
-import {ContainerProperties,AbstractContainerComponent} from "@adobe/aem-core-components-angular-spa/core";
+import {AbstractContainerComponent} from "@adobe/aem-core-components-angular-spa/core";
+import {ContainerProperties} from "@adobe/aem-core-components-angular-spa/emptyfunctions";
 import {isPlatformBrowser} from "@angular/common";
 
 export interface CarouselV1PropertiesAccessibility {

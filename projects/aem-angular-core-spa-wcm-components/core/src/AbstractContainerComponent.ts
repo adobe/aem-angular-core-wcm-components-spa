@@ -18,12 +18,10 @@
 
 import {ComponentMapping, AEMAllowedComponentsContainerComponent, MappedComponentProperties, Utils} from "@adobe/aem-angular-editable-components";
 import {Component, HostBinding, Injectable, Input, OnDestroy, AfterViewInit, PLATFORM_ID, Inject} from "@angular/core";
-import {ContainerModel, ContainerProperties, Model} from "./common";
+import {ContainerModel, ContainerProperties, Model} from "@adobe/aem-core-components-angular-spa/emptyfunctions";
 import {isPlatformBrowser} from "@angular/common";
 
-export function ContainerIsEmptyFn(props:ContainerModel){
-    return props[":itemsOrder"] == null || props[":itemsOrder"].length === 0;
-}
+
 
 @Component({
     selector: 'aem-core-abstract-container',

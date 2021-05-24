@@ -16,10 +16,9 @@
 
 import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
-import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule} from "@angular/router";
 import {AbstractContainerComponent} from "./AbstractContainerComponent";
-
+import {AemAngularCoreSpaWcmComponentsEmptyFunctions} from "@adobe/aem-core-components-angular-spa/emptyfunctions";
 @NgModule({
     imports: [CommonModule, RouterModule],
     declarations: [AbstractContainerComponent],
