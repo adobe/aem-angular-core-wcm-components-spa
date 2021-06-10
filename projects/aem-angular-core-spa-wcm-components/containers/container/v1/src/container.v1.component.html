@@ -34,6 +34,9 @@
                  [class]="getColumnClassNames(itemKey)"
                  [attr.data-cq-data-path]="getAttrDataPath(itemKey)"></div>
         </ng-container>
+        <div *ngIf="isInEditMode"
+             [attr.data-cq-data-path]="placeholderPath"
+             [class]="getPlaceholderClassNames()"></div>
     </ng-container>
 </ng-template>
 
