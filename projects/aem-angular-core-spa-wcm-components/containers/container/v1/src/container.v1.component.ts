@@ -51,7 +51,7 @@ export class ContainerV1Component extends AEMResponsiveGridComponent implements 
 
 
     showResponsiveGrid():boolean{
-        return this.layout === ContainerLayout.RESPONSIVEGRID;
+        return this.layout !== ContainerLayout.SIMPLE;
     }
 
     @HostBinding('style')
