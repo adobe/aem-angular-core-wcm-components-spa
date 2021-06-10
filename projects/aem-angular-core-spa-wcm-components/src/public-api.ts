@@ -14,7 +14,6 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-
 export * from './aem-angular-core-spa-wcm-components.module';
 
 export * from "@adobe/aem-core-components-angular-spa/core";
