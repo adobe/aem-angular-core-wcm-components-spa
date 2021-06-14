@@ -18,7 +18,7 @@
 
 import {ComponentMapping, AEMAllowedComponentsContainerComponent, MappedComponentProperties, Utils} from "@adobe/aem-angular-editable-components";
 import {Component, HostBinding, Injectable, Input, OnDestroy, AfterViewInit, PLATFORM_ID, Inject} from "@angular/core";
-import {ContainerModel, ContainerProperties, Model} from "./common";
+import {ContainerModel, ContainerProperties, HasBaseCssClass, Model} from "./common";
 import {isPlatformBrowser} from "@angular/common";
 
 export function ContainerIsEmptyFn(props:ContainerModel){
@@ -29,7 +29,7 @@ export function ContainerIsEmptyFn(props:ContainerModel){
     selector: 'aem-core-abstract-container',
     template: ''
 })
-export class AbstractContainerComponent extends AEMAllowedComponentsContainerComponent implements ContainerProperties, AfterViewInit, OnDestroy, MappedComponentProperties{
+export class AbstractContainerComponent extends AEMAllowedComponentsContainerComponent implements ContainerProperties, HasBaseCssClass, AfterViewInit, OnDestroy, MappedComponentProperties{
     @Input() componentMapping: typeof ComponentMapping = ComponentMapping;
     @Input() cqForceReload: boolean = false;
     @Input() cqItems: {[key: string]: Model} = {};

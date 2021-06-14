@@ -14,12 +14,11 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-export * from './aem-angular-core-spa-wcm-components.module';
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/1.0/config/configuration-file.html
 
-export * from "@adobe/aem-core-components-angular-spa/core";
-export * from "@adobe/aem-core-components-angular-spa/containers/accordion/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/carousel/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/container/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/tabs/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/contentfragment/v1";
+const karmaConfigGenerator = require('../../../../../karma-conf-generator');
 
+module.exports = function (config) {
+  return karmaConfigGenerator(config, 'aem-angular-core-spa-wcm-components-container-v1');
+};
