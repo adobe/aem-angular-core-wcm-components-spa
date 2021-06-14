@@ -22,6 +22,10 @@ export interface ContainerProperties extends MappedComponentProperties {
     cqItemsOrder: string[];
 }
 
+export interface HasBaseCssClass {
+    baseCssClass?:string;
+}
+
 export interface ContainerModel extends Model{
 
 }

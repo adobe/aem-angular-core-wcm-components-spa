@@ -1,0 +1,31 @@
+<ng-container>
+
+    <div id="{{id}}" class="{{baseCssClass}}">
+        <h1 [innerText]="title"></h1>
+
+        <div *ngIf="shouldShowElements()" class="{{baseCssClass}}__elements">
+            <ng-container
+                    *ngFor="let element of elementsOrder"
+                    [ngTemplateOutlet]="elementEntries"
+                    [ngTemplateOutletContext]="{element: getElement(element),name:element}">
+            </ng-container>
+        </div>
+        <ng-container *ngFor="let itemKey of cqItemsOrder">
+
+            <aem-model-provider [cqItem]="getItem(itemKey)"
+                                [cqPath]="getDataPath(itemKey)"
+                                [itemName]="itemKey"></aem-model-provider>
+        </ng-container>
+    </div>
+
+</ng-container>
+
+<ng-template #elementEntries let-name='name' let-element='element'>
+    <div class="{{baseCssClass}}__element">
+        <div class="{{baseCssClass}}__elemententry {{baseCssClass}}__elemententry--key"><h4>{{name}}</h4></div>
+        <div class="{{baseCssClass}}__elemententry {{baseCssClass}}__elemententry--value">value: {{element.value}}</div>
+        <div class="{{baseCssClass}}__elemententry {{baseCssClass}}__elemententry--datatype">datatype: {{element.dataType}}</div>
+        <div class="{{baseCssClass}}__elemententry {{baseCssClass}}__elemententry--multivalue">multivalue: {{element.multiValue ? 'true': 'false'}}</div>
+        <div class="{{baseCssClass}}__elemententry {{baseCssClass}}__elemententry--type">type: {{element[":type"]}}</div>
+    </div>
+</ng-template>

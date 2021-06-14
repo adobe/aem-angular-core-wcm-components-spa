@@ -12,6 +12,7 @@
     "test-cover-libs": "npm-run-all test-container-core test-accordion-v1 test-carousel-v1 test-container-v1 test-tabs-v1 build-spa",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "cover:library:spa:contentfragment:v1": "ng test aem-angular-core-spa-wcm-components-contentfragment-v1 --code-coverage=true",
     "cover:library:spa:container:core": "ng test aem-angular-core-spa-wcm-components-core  --code-coverage=true",
     "cover:library:spa:accordion:v1": "ng test aem-angular-core-spa-wcm-components-accordion-v1  --code-coverage=true",
     "cover:library:spa:carousel:v1": "ng test aem-angular-core-spa-wcm-components-carousel-v1  --code-coverage=true",

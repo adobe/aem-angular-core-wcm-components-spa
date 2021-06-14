@@ -23,6 +23,7 @@ import {AemAngularCoreWcmComponentsAccordionV1} from "@adobe/aem-core-components
 import {AemAngularCoreWcmComponentsCarouselV1} from "@adobe/aem-core-components-angular-spa/containers/carousel/v1";
 import {AemAngularCoreWcmComponentsTabsV1} from "@adobe/aem-core-components-angular-spa/containers/tabs/v1";
 import {AemAngularCoreWcmComponentsContainerV1} from "@adobe/aem-core-components-angular-spa/containers/container/v1";
+import {AemAngularCoreWcmComponentsContentFragmentV1} from "@adobe/aem-core-components-angular-spa/containers/contentfragment/v1";
 import {AemAngularCoreSpaWcmComponentsCore} from "@adobe/aem-core-components-angular-spa/core";
 
 @NgModule({
@@ -33,6 +34,7 @@ import {AemAngularCoreSpaWcmComponentsCore} from "@adobe/aem-core-components-ang
         AemAngularCoreWcmComponentsCarouselV1,
         AemAngularCoreWcmComponentsContainerV1,
         AemAngularCoreWcmComponentsTabsV1,
+        AemAngularCoreWcmComponentsContentFragmentV1,
         AemAngularCoreSpaWcmComponentsCore
     ],
     exports: [
@@ -41,6 +43,7 @@ import {AemAngularCoreSpaWcmComponentsCore} from "@adobe/aem-core-components-ang
         AemAngularCoreWcmComponentsCarouselV1,
         AemAngularCoreWcmComponentsContainerV1,
         AemAngularCoreWcmComponentsTabsV1,
+        AemAngularCoreWcmComponentsContentFragmentV1,
         AemAngularCoreSpaWcmComponentsCore
     ]
 })

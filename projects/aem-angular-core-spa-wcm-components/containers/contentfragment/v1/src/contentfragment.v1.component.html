@@ -1,0 +1,7 @@
+<ng-container >
+    <div *ngIf="showFragment()" aemContentFragment [cqItem]="getItemSelf()"
+                        [cqPath]="getPathSelf()"
+                        [itemName]="getItemKey()"></div>
+
+    <div *ngIf="showPlaceHolder()" class="cf-placeholder">ContentFragment is empty.</div>
+</ng-container>

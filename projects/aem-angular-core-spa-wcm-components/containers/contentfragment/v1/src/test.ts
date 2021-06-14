@@ -14,12 +14,21 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-export * from './aem-angular-core-spa-wcm-components.module';
 
-export * from "@adobe/aem-core-components-angular-spa/core";
-export * from "@adobe/aem-core-components-angular-spa/containers/accordion/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/carousel/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/container/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/tabs/v1";
-export * from "@adobe/aem-core-components-angular-spa/containers/contentfragment/v1";
+import 'core-js/features/reflect';
+import 'zone.js/dist/zone';
+import 'zone.js/dist/zone-testing';
+import {getTestBed} from '@angular/core/testing';
+import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angular/platform-browser-dynamic/testing';
 
+declare const require: any;
+
+// First, initialize the Angular testing environment.
+getTestBed().initTestEnvironment(
+    BrowserDynamicTestingModule,
+    platformBrowserDynamicTesting()
+);
+// Then we find all the tests.
+const context = require.context('./../', true, /\.spec\.ts$/);
+// And load the modules.
+context.keys().map(context);
