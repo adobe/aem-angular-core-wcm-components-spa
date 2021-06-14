@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { Component, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ContentFragmentV1Component,ContentFragmentV1Properties} from "../../containers/contentfragment/v1/src/public-api";
 
 
@@ -21,7 +21,10 @@ import {ContentFragmentV1Component,ContentFragmentV1Properties} from "../../cont
 /**
  * The current class carries the base presentational logic of the AEM Layout Container (aka. Responsive grid)
  */
-export class LazyComponent extends ContentFragmentV1Component implements ContentFragmentV1Properties {
+export class LazyComponent extends ContentFragmentV1Component implements ContentFragmentV1Properties, OnInit {
+    ngOnInit(): void {
+        console.log("test")
+    }
 
 }
 

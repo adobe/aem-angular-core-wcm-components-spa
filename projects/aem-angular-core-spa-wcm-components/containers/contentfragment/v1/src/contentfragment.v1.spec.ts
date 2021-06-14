@@ -19,7 +19,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {BrowserDynamicTestingModule} from '@angular/platform-browser-dynamic/testing';
 
-
+import {ComponentMapping as SPAComponentMapping} from '@adobe/aem-spa-component-mapping';
 import {ContentFragmentV1Component} from './contentfragment.v1.component';
 import {
     AEMComponentDirective,
@@ -99,6 +99,8 @@ describe('ContentFragmentV1', () => {
         }).compileComponents();
 
 
+        SPAComponentMapping.mapping = {};
+        SPAComponentMapping.lazyMapping = {};
         MapTo('core-components-examples/wcm-react/components/content-fragment')(ContentFragmentV1Component);
 
         fixture = TestBed.createComponent(ContentFragmentV1Component);
@@ -191,7 +193,7 @@ describe('ContentFragmentV1', () => {
 
     it('should render the lazy content fragment', async () => {
 
-        LazyMapToContentFragmentModel('testing-frontend-react/models/custom-model')(
+        LazyMapToContentFragmentModel('testing-frontend-react/models/testmodel')(
             () => new Promise<Type<LazyComponent>>((resolve, reject) => {
                 import('../../../../test/lazy-component-wrapper/lazy.component').then((module) => resolve(module.LazyComponent)).catch(reject)
             })
@@ -211,7 +213,6 @@ describe('ContentFragmentV1', () => {
         fixture.detectChanges();
 
         await fixture.whenStable();
-
         let element = fixture.debugElement.nativeElement;
         expect(element.querySelectorAll('#lazyContentFragment-' + LAYOUT.id).length).toBe(1);
 
