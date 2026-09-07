@@ -7,7 +7,7 @@
     "@adobe/aem-angular-editable-components": "^1.0.3",
     "@adobe/aem-spa-component-mapping": "^1.0.5",
     "@adobe/aem-spa-page-model-manager": "^1.0.3",
-    "@angular/common": "^9.1.12",
+    "@angular/common": "^19.2.16",
     "@angular/core": "^9.1.12"
   },
   "dependencies": {
