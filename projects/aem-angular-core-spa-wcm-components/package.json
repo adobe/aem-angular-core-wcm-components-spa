@@ -8,9 +8,9 @@
         "@adobe/aem-spa-component-mapping": "^1.0.5",
         "@adobe/aem-spa-page-model-manager": "^1.0.3",
         "@angular/common": "^9.1.12",
-        "@angular/core": "^9.1.12"
+        "@angular/core": "^9.1.12 || ^22.0.0"
     },
     "dependencies": {
-        "tslib": "^1.10.0"
+        "tslib": "^2.0.0"
     }
 }
